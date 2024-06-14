@@ -1,0 +1,30 @@
+﻿@model List<Band>
+
+<h1>Group</h1>
+
+<table class="table">
+    <thead>
+            <tr>
+                <th>BandName</th>
+                <th>Year</th>
+            </tr>
+    </thead>
+        <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    foreach (var band in Model)
+                    {
+                        <tr>
+                            <td>@band.BandName</td>
+                            <td>@band.Year</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="3">No bands available</td>
+                    </tr>
+                }
+            </tbody>
+</table>
