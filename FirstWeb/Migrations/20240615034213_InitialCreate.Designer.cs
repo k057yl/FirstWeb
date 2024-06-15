@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FirstWeb.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240614100725_InitialCreate")]
+    [Migration("20240615034213_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -24,7 +24,7 @@ namespace FirstWeb.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("FirstWeb.Models.Band", b =>
+            modelBuilder.Entity("FirstWeb.Models.Food", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -32,19 +32,21 @@ namespace FirstWeb.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("BandName")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Year")
+                    b.Property<int>("PetId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Bands");
+                    b.HasIndex("PetId");
+
+                    b.ToTable("Foods");
                 });
 
-            modelBuilder.Entity("FirstWeb.Models.Song", b =>
+            modelBuilder.Entity("FirstWeb.Models.Pet", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -52,16 +54,36 @@ namespace FirstWeb.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("BandId")
+                    b.Property<int>("Age")
                         .HasColumnType("int");
 
-                    b.Property<string>("SongName")
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Species")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Songs");
+                    b.ToTable("Pets");
+                });
+
+            modelBuilder.Entity("FirstWeb.Models.Food", b =>
+                {
+                    b.HasOne("FirstWeb.Models.Pet", "Pet")
+                        .WithMany("Foods")
+                        .HasForeignKey("PetId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Pet");
+                });
+
+            modelBuilder.Entity("FirstWeb.Models.Pet", b =>
+                {
+                    b.Navigation("Foods");
                 });
 #pragma warning restore 612, 618
         }

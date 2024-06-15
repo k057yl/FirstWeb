@@ -2,6 +2,7 @@ using FirstWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using FirstWeb.Data;
+using FirstWeb.Models.DTO;
 
 namespace FirstWeb.Controllers
 {
@@ -28,18 +29,33 @@ namespace FirstWeb.Controllers
             return View();
         }
         
-        
         public IActionResult PrintValue()
         {
-            var bands = _context.Bands.ToList();
-            if (bands == null)
+            var pets = _context.Pets.Select(p => new PetViewModel
             {
-                return NotFound();
-            }
+                Id = p.Id,
+                Name = p.Name,
+                Age = p.Age,
+                Species = p.Species
+            }).ToList();
 
-            return View(bands);
+            return View(pets);
         }
-        
+        /*
+        public IActionResult PrintValue()
+        {
+            var bandId = 1;
+            var band = _context.Bands.Include(b => b.Songs).FirstOrDefault(b => b.Id == bandId);
+
+            var viewModel = new BandSongs
+            {
+                Band = band,
+                Songs = band?.Songs
+            };
+
+            return View(viewModel);
+        }
+        */
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
