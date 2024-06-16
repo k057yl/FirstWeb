@@ -28,7 +28,7 @@ namespace FirstWeb.Controllers
         {
             return View();
         }
-        
+        /*
         public IActionResult PrintValue()
         {
             var pets = _context.Pets.Select(p => new PetViewModel
@@ -41,21 +41,13 @@ namespace FirstWeb.Controllers
 
             return View(pets);
         }
-        /*
+        */
         public IActionResult PrintValue()
         {
-            var bandId = 1;
-            var band = _context.Bands.Include(b => b.Songs).FirstOrDefault(b => b.Id == bandId);
-
-            var viewModel = new BandSongs
-            {
-                Band = band,
-                Songs = band?.Songs
-            };
-
-            return View(viewModel);
+            
+            return View();
         }
-        */
+        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
