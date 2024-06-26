@@ -7,6 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Store\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Store\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Pages\Store\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Pages\Store\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Pet\PetPrint.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Groups\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Groups\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Store\Details.cshtml" />
+    <UpToDateCheckInput Remove="Pages\Store\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0-preview.5.24306.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0-preview.5.24306.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0-preview.5.24306.3">
@@ -16,15 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="Pages\Store\Details.cshtml" />
-    <_ContentIncludedByDefault Remove="Pages\Store\Index.cshtml" />
-    <_ContentIncludedByDefault Remove="Views\Pages\Store\Details.cshtml" />
-    <_ContentIncludedByDefault Remove="Views\Pages\Store\Index.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\Store\Details.cshtml" />
-    <UpToDateCheckInput Remove="Pages\Store\Index.cshtml" />
+    <AdditionalFiles Include="Views\Groups\Index.cshtml" />
   </ItemGroup>
 
 </Project>

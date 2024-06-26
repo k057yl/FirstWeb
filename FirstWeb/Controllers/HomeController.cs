@@ -2,7 +2,6 @@ using FirstWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using FirstWeb.Data;
-using FirstWeb.Models.DTO;
 
 namespace FirstWeb.Controllers
 {
@@ -28,27 +27,7 @@ namespace FirstWeb.Controllers
         {
             return View();
         }
-        /*
-        public IActionResult PrintValue()
-        {
-            var pets = _context.Pets.Select(p => new PetViewModel
-            {
-                Id = p.Id,
-                Name = p.Name,
-                Age = p.Age,
-                Species = p.Species
-            }).ToList();
-
-            return View(pets);
-        }
-        */
-        public IActionResult PrintValue()
-        {
-            
-            return View();
-        }
         
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

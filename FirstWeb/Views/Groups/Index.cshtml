@@ -1,0 +1,74 @@
+﻿@model IEnumerable<FirstWeb.Models.Entity.Group>
+
+@{
+    ViewData["Title"] = "Groups";
+    var selectedGroupId = ViewData["SelectedGroupId"]?.ToString();
+    var groups = (SelectList)ViewData["Groups"];
+}
+
+<h1>Groups</h1>
+
+<form method="get" asp-action="Index">
+    <div class="form-group">
+        <label for="groupId">Select Group:</label>
+        <select id="groupId" name="groupId" class="form-control" onchange="this.form.submit()">
+            <option value="">All Groups</option>
+            @foreach (var group in groups)
+            {
+                @if (group.Value == selectedGroupId)
+                {
+                    <option value="@group.Value" selected>@group.Text</option>
+                }
+                else
+                {
+                    <option value="@group.Value">@group.Text</option>
+                }
+            }
+        </select>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Group Name</th>
+        <th>Description</th>
+        <th>Members</th>
+        <th>Instrument</th>
+        <th>Songs</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var group in Model)
+    {
+        <tr>
+            <td>@group.GroupName</td>
+            <td>@group.GroupId</td>
+            <td>
+                <ul>
+                    @foreach (var groupMember in group.GroupMembers)
+                    {
+                        <li>@groupMember.Member.MemberName</li>
+                    }
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    @foreach (var instrument in group.GroupMembers)
+                    {
+                        <li>@instrument.Member.Instrument</li>
+                    }
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    @foreach (var groupSong in group.GroupSongs)
+                    {
+                        <li>@groupSong.Song.SongName</li>
+                    }
+                </ul>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

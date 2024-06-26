@@ -13,6 +13,30 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\k057yl\\source\\repos\\FirstWeb\\FirstWeb\\wwwroot\\img\\Header\\Header.png",
+      "PackagePath": "staticwebassets\\img\\Header\\Header.png"
+    },
+    {
+      "Id": "C:\\Users\\k057yl\\source\\repos\\FirstWeb\\FirstWeb\\wwwroot\\img\\Header\\LogoSite.png",
+      "PackagePath": "staticwebassets\\img\\Header\\LogoSite.png"
+    },
+    {
+      "Id": "C:\\Users\\k057yl\\source\\repos\\FirstWeb\\FirstWeb\\wwwroot\\img\\all_animal_image.png",
+      "PackagePath": "staticwebassets\\img\\all_animal_image.png"
+    },
+    {
+      "Id": "C:\\Users\\k057yl\\source\\repos\\FirstWeb\\FirstWeb\\wwwroot\\img\\cat_image.png",
+      "PackagePath": "staticwebassets\\img\\cat_image.png"
+    },
+    {
+      "Id": "C:\\Users\\k057yl\\source\\repos\\FirstWeb\\FirstWeb\\wwwroot\\img\\dog_image.png",
+      "PackagePath": "staticwebassets\\img\\dog_image.png"
+    },
+    {
+      "Id": "C:\\Users\\k057yl\\source\\repos\\FirstWeb\\FirstWeb\\wwwroot\\img\\drawing.png",
+      "PackagePath": "staticwebassets\\img\\drawing.png"
+    },
+    {
       "Id": "C:\\Users\\k057yl\\source\\repos\\FirstWeb\\FirstWeb\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -26,20 +26,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\k057yl\source\repos\FirstWeb\FirstWeb
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/k057yl/source/repos/FirstWeb/FirstWeb/Views/Groups/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JvdXBzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/k057yl/source/repos/FirstWeb/FirstWeb/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/k057yl/source/repos/FirstWeb/FirstWeb/Views/Home/PrintValue.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcmludFZhbHVlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/k057yl/source/repos/FirstWeb/FirstWeb/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/k057yl/source/repos/FirstWeb/FirstWeb/Views/Pet/PetPrint.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGV0XFBldFByaW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/k057yl/source/repos/FirstWeb/FirstWeb/Views/Shared/Error.cshtml]
